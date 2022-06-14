@@ -1,15 +1,13 @@
 package golang
 
 type Card struct {
-	suits  string
-	number int
+	suits string
 }
 
 type WinInfo struct {
 	Winner     string
 	ComCard    string
 	PlayerCard string
-	otherCards []string
 }
 type Player struct {
 	Money  int
@@ -31,4 +29,8 @@ type HitRate struct {
 	Fg5  int
 	Fg6  int
 	Fg7  int
+	r1   int
+	r2   int
+	r3   int
+	r4   int
 }

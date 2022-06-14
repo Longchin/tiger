@@ -36,15 +36,69 @@ func Test_smallbig(t *testing.T) {
 
 }
 
+func BenchmarkPrintInt2String01(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		var NGresult, FGresult int
+
+		G.Bet = 100
+
+		a := 0
+		if G.Bet == 100 {
+
+		} else if G.Bet == 200 {
+
+		} else if G.Bet == 500 {
+
+		} else if G.Bet == 1000 {
+
+		} else if G.Bet == 2000 {
+
+		} else if G.Bet == 3000 {
+
+		} else if G.Bet == 5000 {
+
+		} else if G.Bet == 10000 {
+
+		} else {
+			return
+		}
+		for i := 0; i < 1; i++ {
+
+			line(NgSym(Symbol(76)))
+			if FG == 1 {
+				// fmt.Println("--------------------------------------------------------------------")
+				a = FreeGame5()
+				// b++
+			} else if FG == 2 {
+				// fmt.Println("--------------------------------------------------------------------")
+				a = FreeGame6()
+				// c++
+			} else if FG == 3 {
+				// fmt.Println("--------------------------------------------------------------------")
+				a = FreeGame7()
+				// d++
+			}
+			score := Odds(l.five, l.four, l.three)
+			// fmt.Println(score)
+			NGresult += score
+			result += a
+			FGresult += a
+			a = 0
+			score = 0
+			// fmt.Println(FGresult)
+
+			// fmt.Println(NGresult)
+		}
+	}
+}
 func TestShuffle(t *testing.T) {
 	for i := 1; i < 11; i++ {
 		fmt.Println(i)
-
+		h.Ng = 0
 		//計算測試結果
 		var x, total, NGresult, FGresult, b, c, d, times, hit int
 		var e, f, g float64
 		x = 1000000
-
 		G.Bet = 100
 		total = x * G.Bet
 		a := 0
@@ -86,9 +140,10 @@ func TestShuffle(t *testing.T) {
 			score := Odds(l.five, l.four, l.three)
 			// fmt.Println(score)
 			NGresult += score
-			// result += a
+			result += a
 			FGresult += a
 			a = 0
+			score = 0
 			// fmt.Println(FGresult)
 
 			// fmt.Println(NGresult)
@@ -109,8 +164,18 @@ func TestShuffle(t *testing.T) {
 		fmt.Println("FGRTP:", float64(FGresult)/float64(total))
 		fmt.Println("ALLRTP:", float64(FGresult+NGresult)/float64(total))
 		fmt.Println("")
+		fmt.Println("r1", float64(aaa.r1+aaa.r2+aaa.r3+aaa.r4)/float64(b+c+d))
+		fmt.Println("r2", float64(aaa.r2+aaa.r3+aaa.r4)/float64(b+c+d))
+		fmt.Println("r3", float64(aaa.r3+aaa.r4)/float64(b+c+d))
+		fmt.Println("r4", float64(aaa.r4)/float64(b+c+d))
+		fmt.Println(float64(times) / float64(b+c+d))
+		aaa.r1 = 0
+		aaa.r2 = 0
+		aaa.r3 = 0
+		aaa.r4 = 0
 
 	}
+
 }
 
 // // fmt.Println(Cryptorand())
